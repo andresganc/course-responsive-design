@@ -18,19 +18,37 @@
 /* Header */
 .header {
     display: grid;
-    background-image: url(../img/portada.jpg);
-    background-color: grey;
     padding: 60px;
-    filter: brightness(30%);
     height: 700px;
-    z-index: 3;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
+
+    /*
+    background-image: url(../img/portada.jpg);
+    background-position: ;
+    filter: brightness(30%);
+    width: 100%;
+    height: 700px; 
+    */
 }
 
-.header div {
-    z-index: 1;
+
+.header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/portada.jpg);
+    content: "";
+    width: 100%;
+    height: 700px;
+    filter: brightness(30%) blur(2px);
 }
+
+.header_div-container {
+    position: relative;
+}
+
+
 
 /* Nav */
 .nav {
